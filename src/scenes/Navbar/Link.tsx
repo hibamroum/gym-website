@@ -1,8 +1,8 @@
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 type Props = {
-    page:"Home"|"Benefits"|"Our Classes"|"Contact Us"; 
-    selectedPage:string;
+    page:string;//passed page
+    selectedPage:string; //clicked on page
     setSelectedPage:(value:string)=>void;
 }
 
