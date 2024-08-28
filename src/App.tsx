@@ -1,6 +1,7 @@
 //tsx refers to React components while ts refers to normal typescript files
 
 import Navbar from "./scenes/Navbar/index";
+import Home from "./scenes/Home/index";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 
@@ -20,11 +21,11 @@ function App() {
       if (window.scrollY !== 0) {
         setIsTopOfPage(false);
       }
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        //remove Event lister when the page is left
-        window.removeEventListener("scroll", handleScroll);
-      };
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      //remove Event lister when the page is left
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -35,6 +36,8 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      {/*set Selected page is needed to allow navigation to different pages on click */}
+      <Home setSelectedPage={setSelectedPage} />
     </div>
   );
 }
