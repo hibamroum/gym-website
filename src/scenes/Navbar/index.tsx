@@ -13,19 +13,19 @@ type Props = {
 };
 
 function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: Props) {
-  const flexBetween = "flex items-center justify-between";
+  const flexBetween = `flex items-center justify-between`;
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+  const navbarBackground = isTopOfPage ? "" : `bg-primary-100 drop-shadow`;
 
   return (
     <nav>
       <div
-        className={`${navbarBackground}${flexBetween} fixed top-0 z-30 w-full py-6`}
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
       >
-        <div className={`${flexBetween} mx-auto w-5/6`}>
+        <div className={`${flexBetween} mx-auto w-5/6 gap-8`}>
           {/*Left side */}
-          <div className={`${flexBetween} w-full gap-16`}>
+          <div className={`${flexBetween} gap-8`}>
             <img src={Logo} alt="logo" />
           </div>
           {/*Right side on Desktop*/}
@@ -61,7 +61,6 @@ function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: Props) {
                   Become a Member
                 </ActionButton>
               </div>
-              <div></div>
             </div>
           )}
           {/*Right side on Mobile screens */}

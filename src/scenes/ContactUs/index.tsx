@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 
 import ContactUsPageGraphic from "../../assets/ContactUsPageGraphic.png";
 import HText from "../../shared/HText";
-import { error } from "console";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -146,7 +145,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="md:before:content-evolvetext w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+            <div className="md:before:content-evolvetext w-full before:absolute before:-bottom-20 before:-right-10 z-[-1]">
               <img
                 className="w-full"
                 src={ContactUsPageGraphic}
