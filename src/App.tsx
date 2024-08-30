@@ -1,9 +1,11 @@
 //tsx refers to React components while ts refers to normal typescript files
 
 import Benefits from "./scenes/Benefits/index";
-import Navbar from "./scenes/Navbar/index";
 import Home from "./scenes/Home/index";
+import Navbar from "./scenes/Navbar/index";
 import OurClasses from "./scenes/OurClasses/index";
+import ContactUs from "./scenes/ContactUs/index";
+
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 
@@ -42,6 +44,7 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
     </div>
   );
 }
